@@ -17,4 +17,15 @@ export class JokeListComponent {
       new Joke('A kid threw a lump of cheddar at me', 'I thought ‘That’s not very mature’'),
     ];
   }
+
+  addJoke(joke) {
+    this.jokes.unshift(joke);
+  }
+
+  deleteJoke(joke) {
+    const indexToDelete = this.jokes.indexOf(joke);
+    if (indexToDelete !== -1) {
+      this.jokes.splice(indexToDelete, 1);
+    }
+  }
 }
