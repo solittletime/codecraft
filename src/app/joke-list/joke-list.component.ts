@@ -28,4 +28,8 @@ export class JokeListComponent {
       this.jokes.splice(indexToDelete, 1);
     }
   }
+
+  deleteJokes() {
+    this.jokes = [];
+  }
 }
